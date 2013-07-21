@@ -25,7 +25,10 @@ var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
 var HTMLFILE_DEFAULT = "index.html";
-var CHECKSFILE_DEFAULT = "checks.json";
+var CHECKSFILE_DEFAULT = "checks.json"; 
+
+var sys = require('util');
+var rest = require('restler');
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
@@ -40,12 +43,21 @@ var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
 };
 
+var cheerioHtmlSite = function(htmlsite) {
+    return cheerio.load(htmlsite);
+};
+
 var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
 var checkHtmlFile = function(htmlfile, checksfile) {
-    $ = cheerioHtmlFile(htmlfile);
+    if(typeof program.url == 'undefined')
+    {
+        $ = cheerioHtmlFile(htmlfile);
+    } else {
+        $ = cheerioHtmlSite(htmlfile);
+    }
     var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
@@ -55,20 +67,38 @@ var checkHtmlFile = function(htmlfile, checksfile) {
     return out;
 };
 
+var requestHtmlSite = function(htmlsite, checksfile){
+    rest.get(htmlsite).on('complete', function(result){
+        checkJson = checkHtmlFile(result, checksfile);
+        logResults();
+    });
+};
+
 var clone = function(fn) {
     // Workaround for commander.js issue.
     // http://stackoverflow.com/a/6772648
     return fn.bind({});
 };
 
+var logResults = function() {
+    var outJson = JSON.stringify(checkJson, null, 4);
+    fs.writeFile('out.txt', outJson, encding="utf8");
+    console.log(outJson);
+};
+
 if(require.main == module) {
     program
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
+        .option('u, --url <url>', 'URL to input file')
         .parse(process.argv);
-    var checkJson = checkHtmlFile(program.file, program.checks);
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+        var checkJson;
+        if(typeof program.url == 'undefined') {
+            checkJson = checkHtmlFile(program.file, program.checks);
+        logResults();
+        } else {
+            requestHtmlSite(program.url, program.checks);
+        }
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
