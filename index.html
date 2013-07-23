@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My First Bitstarter</title>
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined-no-icons.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-    <script scr="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
-    <style type="text/css">
+ <head>
+  <meta charset="utf-8">
+  <title>A10-C "Warthog" Backlit Cockpit Panels</title>
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+  <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+  <script scr="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+  <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+  <style type="text/css">
+
     /* Large desktop */
    @media (min-width: 980px) {
       body {
@@ -37,63 +38,209 @@
       border-top: 1px white solid;
      }
     }
-      <div class="row navigation">
-        <div class="span2 logo">
-          Logo
-        </div>
-        <div class="span6 blank">
-          Blank
-        </div>
-        <div class="span4 about">
-          About
-        </div>
-      </div>
-      <div class="row heading">
-        <div class="span12">
-          <h1>Bitstarter Title</h1>
-        </div>
-      </div>
-      <div class="row subheading">
-        <div class="span12">
-          <p class="lead">This is my first bitstarter project.</p>
-        </div>
-      </div>
-      <div class="row pitch">
-        <div class="span6 video">
-          Video
-        </div>
-        <div class="span6">
-          <div class="thermometer">
-            Thermometer
-          </div>
-          <div class="order">
-            Order
-          </div>
-          <div class="social">
-            Social
-          </div>
-        </div>
-      </div>
-      <div class="row section1">
-        <div class="span12">
-          Marketing Section 1
-        </div>
-      </div>
-      <div class="row section2">
-        <div class="span12">
-          Marketing Section 2
-        </div>
-      </div>
-      <div class="row faq">
-        <div class="span12">
-          FAQ
-        </div>
-      </div>
-      <div class="row footer">
-        <div class="span12">
-          Footer
-        </div>
-      </div>
+
+    /* All form factors */
+
+    /* Main body and headings */
+    body{
+     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }
+    .heading, .subheading {
+     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+     text-align: center;
+    }
+    p.lead {
+     padding-top: 1.5%;
+     font-size: 24px;
+     line-height: 30px;
+    }
+    p {
+     font-size: 18px;
+     line-height: 24PX;
+    }
+
+    /* VIDEO PITCH AND ACTION */
+    .PITCH {
+     PADDING: 2.5% 0%;
+    }
+    .ORDER {
+     PADDING: 2% 0%;
+    }
+    .ACTIONS {
+     BACKGROUND-COLOR: #343434;
+     PADDING: 3% 0%;
+    }
+    .VIDEO, .THERMOMETER, .ORDER, .SOCIAL, .STATISTICS {
+     TEXT-ALIGN: CENTER;
+    }
+    .STATISTICS H3, .STATISTICS P {
+     COLOR: WHITE;
+    }
+
+    /* MARKETING COPY AND FOOTER */
+    .COPY {
+     PADDING-TOP: 2.5%;
+     PADDING-BOTTOM: 2.5%;
+     TEXT-ALIGN: JUSTIFY;
+    }
+    .ASSET {
+     PADDING: 2.5%, 0%;
+    }
+    .FOOTER {
+     COLOR: #CCCCCC;
+     TEXT-ALIGN: CENTER;
+    }
+    .FOOTER P {
+     FONT-SIZE: 11PX;
+    }
+    .FOOTER A {
+     COLOR: #CCCCFF;
+    }
+  </STYLE>
+ </HEAD>
+ <BODY>
+  <DIV CLASS="NAVBAR NAVBAR-INVERSE NAVBAR-FIXED-TOP">
+   <DIV CLASS="NAVBAR-INNER">
+    <DIV CLASS="CONTAINER">
+     <BUTTON TYPE="BUTTON" CLASS="BTN BTN-NAVBAR"
+	      DATA-TOGGLE="COLLAPSE" DATA-TARGET=".NAV-COLLAPSE">
+      <SPAN CLASS="ICON-BAR"></SPAN>
+      <SPAN CLASS="ICON-BAR"></SPAN>
+      <SPAN CLASS="ICON-BAR"></SPAN>
+     </BUTTON>
+     <A CLASS="BRAND" HREF="#">BITSTARTER</A>
+     <DIV CLASS="NAV-COLLAPSE COLLAPSE">
+      <UL CLASS="NAV">
+       <LI CLASS="ACTIVE"><A HREF="#">HOME</A></LI>
+       <LI><A HREF="#ABOUT">ABOUT</A></LI>
+       <LI><A HREF="#CONTACT">CONTACT</A></LI>
+      </UL>
+     </DIV><!--/.NAV-COLLAPSE -->
+    </DIV>
+   </DIV>
+  </DIV>
+
+  <DIV CLASS="CONTAINER">
+   <DIV CLASS="ROW-FLUID HEADING">
+    <DIV CLASS="SPAN12">
+     <H1>A10-C PANELS FROM NEMESIM</H1>
+    </DIV>
+   </DIV>
+   <DIV CLASS="ROW-FLUID SUBHEADING">
+    <DIV CLASS="SPAN12">
+     <P CLASS="LEAD">A10-C COCKPIT PANELS FOR FLIGHT SIM ENTHUSIASTS DEMANDING OVERWHELMING REALISM!</P>
+    </DIV>
+   </DIV>
+   <DIV CLASS="ROW-FLUID PITCH">
+    <DIV CLASS="SPAN5 OFFSET1 VIDEO">
+     <IMG CLASS="IMG-POLAROID" SRC="HTTP://PLACEHOLD.IT/480X300">
+    </DIV>
+    <DIV CLASS="SPAN5 ACTIONS">
+     <DIV CLASS="SPAN8 OFFSET2">
+      <DIV CLASS="STATISTICS">
+       <DIV CLASS="SPAN4">
+        <DIV CLASS="LINEDIV-L">
+         <H3>1000</H3> <P>BACKERS</P>
+        </DIV>
+       </DIV>
+       <DIV CLASS="SPAN4">
+        <DIV CLASS="LINEDIV-C">
+         <H3>$6000</H3> <P>OF $10,000</P>
+        </DIV>
+       </DIV>
+       <DIV CLASS="SPAN4">
+        <DIV CLASS="LINEDIV-R">
+         <H3>10</H3> <P>DAYS LEFT</P>
+        </DIV>
+       </DIV>
+      </DIV>
+     </DIV>
+     <DIV CLASS="SPAN10 OFFSET1">
+       <!-- BOOTSTRAP PROGRESS BAR -->
+       <!-- HTTP://TWITTER.GITHUB.IO/BOOTSTRAP/COMPONENTS.HTML#PROGRESS -->
+      <DIV CLASS="THERMOMETER PROGRESS ACTIVE">
+       <DIV CLASS="BAR BAR-SUCCESS" STYLE="WIDTH: 60%;"></DIV>
+       <DIV CLASS="BAR BAR-WARNING" STYLE="WIDTH: 40%;"></DIV>
+      </DIV>
+     </DIV>
+     <DIV CLASS="SPAN6 OFFSET3 ORDER">
+       <!-- STANDARD BOOTSTRAP BUTTON -->
+       <!-- HTTP://TWITTER.GITHUB.IO/BOOTSTRAP/BASE-CSS.HTML#BUTTONS -->
+      <BUTTON CLASS="BTN BTN-SUCCESS BTN-LARGE">PREORDER</BUTTON>
+     </DIV>
+     <DIV CLASS="SPAN8 OFFSET2 SOCIAL">
+       <!-- Social buttons are not included in default Bootstrap. -->
+       <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+      <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+      <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+     </div>
     </div>
+   </div>
+
+    <!-- Beyond this part the marketing copy begins. -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+    <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+    <!-- http://placehold.it -->
+   <div class="row-fluid section1">
+    <div class="span5 offset1 asset">
+     <img class="img-polaroid" src="http://placehold.it/480x300">
+    </div>
+    <div class="span5 copy">
+     <p>
+        Take your flight sim experience to a whole new level with the new instrument panels from Nemesim. These backlit panels modeled for the A10-C "Warthog" military jet are designed to increase your level of immersion while flying using DCS: A10-C "Warthog".</p>
+     <p>All panles include:</p>
+      <ul>
+       <li>Integrated variable-intensity Backlight</li>
+       <li>DZUS spacing</li>
+       <li>MIL-STD engraved lettering</li>
+       <li>Removable Steel Backplate</li>
+       <li>All required software to integrate with DCS:A10-C</li>
+      </ul>
+     <p> Buy a set to get flying right away or buy panels individually to compliment your home built cockpit.</p>
+    </div>
+   </div>
+
+   <div class="row-fluid section2">
+    <div class="span5 offset1 copy copy-right">
+     <p>
+        A10-C "Warthog" panels are offered in two product lines:</p>
+     <ul>
+      <li>Raider: Same high-quality panel build, industrial switches</li>
+      <li>Cyborg: Military switches equivalent to those found in the A10-C military jet</li>
+     </ul>
+     <p>
+        If you demand the best, ask for <strong>Cyborg</strong> line panels. For those of you who have mortal blood, we are convinced you will be delighted with the <strong>Raider</strong> line panels.</p>
+    </div>
+    <div class="span5 asset">
+     <img class="img-polaroid" src="http://placehold.it/480x300">
+    </div>
+   </div>
+
+   <div class="row-fluid faq">
+    <div class="span10 offset1">
+     <h3>FAQ</h3>
+      <div class="accordion" id="accordion2">
+       <div class="accordion-group">
+        <div class="accordion-heading">
+         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+           How do I mount your panels?
+         </a>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse">
+         <div class="accordion-inner">
+           For the avid enthusiast, these panels can be mounted in any home built cockpit with DZUS (145mm) spacing using either 1/2-turn fasteners or included M4 hardware. Individual panels can also be fixed to any flat surface using included mounting hardware. We are currently developing a cockpit frame to be used with all of our panels.
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <div class="row-fluid footer">
+     <div class="span12">
+      <p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>.</p>
+     </div>
+    </div>
+   </div>
   </body>
-</html>
+ </html>
